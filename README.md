@@ -35,7 +35,13 @@ Completed frequencies, best move counts and the last selected frequency are stor
 
 `shift-signal-itch.zip` is ready to inspect and upload as an HTML game. `index.html` is at the ZIP root; there is no enclosing directory. In an authorized itch.io project, select **HTML**, upload the ZIP, and mark it **This file will be played in the browser**. A suggested initial embed size is **1280×900**, with full-screen and mobile-friendly play enabled. Narrow embeds use the compact touch layout.
 
-Game Off requires this public source repository and a playable itch.io entry, followed by separate submission to the Game Off jam. Uploading the game alone does not enter the competition. Entry status and links are recorded in the application log beside this project.
+Published and submitted on 16 November 2026.
+
+- Play: https://nicholas-afk.itch.io/shift-signal
+- Public source: https://github.com/Nicholas-afk/shift-signal-game-off-2026
+- Event: https://itch.io/jam/game-off-2026
+
+The Game Off site confirmed “Entry submitted to jam.” This records an entry, not an award or selection. The form discloses the AI contribution in all six applicable areas and labels the extent “Almost everything - predominantly AI-generated.”
 
 ## Authorship and AI disclosure
 
@@ -61,4 +67,4 @@ The test has no package dependencies and writes `TEST-RESULTS.txt`. It independe
 
 `generate-levels.cjs` is the development utility that regenerates `levels.js` deterministically. It enumerates candidates and selects the authored difficulty stages. There is no procedural randomness during play.
 
-Logic/static checks passed 3,289 assertions. Browser checks confirmed desktop rendering, a completed first level, shortest-route hints, keyboard moves, undo, saved progress and the compact mobile layout. Sound is optional and disabled by default; audible output was not independently assessed.
+Logic/static checks passed 3,289 assertions. Browser checks confirmed desktop rendering, a completed first level, shortest-route hints, keyboard moves, undo, saved progress the compact mobile layout and successful hosted itch.io play. Sound is optional and disabled by default; audible output was not independently assessed.
