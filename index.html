@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e7">
+  <meta name="description" content="A quiet spatial puzzle. Shift whole rows and columns to bring every signal home.">
+  <title>Shift Signal — a spatial puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="masthead">
+      <a class="wordmark" href="#main-game" aria-label="Shift Signal, jump to game"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span> SMALL SHIFTS. NEW POSSIBILITIES.</a>
+      <div class="header-tools">
+        <button class="quiet-button" id="sound-toggle" aria-pressed="false">Sound <span id="sound-state">off</span></button>
+        <button class="quiet-button" id="help-open">How to play <span aria-hidden="true">↗</span></button>
+      </div>
+    </header>
+
+    <section class="game-layout" id="main-game" aria-labelledby="game-title">
+      <div class="story-panel">
+        <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> A SPATIAL PUZZLE IN TEN FREQUENCIES</div>
+        <h1 id="game-title">Shift<br><em>Signal.</em><span class="title-period" aria-hidden="true"></span></h1>
+        <p class="introduction">A little movement.<br>A different way through.</p>
+        <p class="premise">Slide entire rows and columns. Bring each solid signal onto its matching outline. The edge is only another beginning.</p>
+
+        <div class="instruction-strip">
+          <span class="instruction-number">01</span>
+          <div><strong>Everything in a line moves together.</strong><p>Tap an arrow around the board. Signals wrap when they reach an edge.</p></div>
+        </div>
+        <div class="instruction-strip second-instruction">
+          <span class="instruction-number">02</span>
+          <div><strong>Find the right alignment.</strong><p>Match by shape and colour. No timer. No penalties for trying.</p></div>
+        </div>
+        <div class="signal-key" id="signal-key" aria-label="Signal shapes"></div>
+
+        <button class="levels-button" id="levels-open"><span>Explore the frequencies</span><span class="level-progress" id="level-progress">0 / 10</span><span aria-hidden="true">↗</span></button>
+      </div>
+
+      <section class="instrument" aria-labelledby="level-title">
+        <header class="instrument-header">
+          <div><span class="eyebrow" id="level-number">FREQUENCY 01 / 10</span><h2 id="level-title">First contact</h2></div>
+          <div class="counter" aria-label="Move count"><span id="move-count">00</span><small>SHIFTS</small></div>
+        </header>
+        <div class="connection-status"><span id="matched-label">2 of 3 signals home</span><div class="connection-dots" id="connection-dots" aria-hidden="true"></div></div>
+        <div class="control-grid" id="control-grid" aria-label="Signal puzzle controls">
+          <div class="board" id="board" role="group" aria-label="Puzzle board">
+            <div class="tiles" id="tiles"></div>
+            <div class="signals" id="signals" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="mobile-controls" aria-label="Shift the selected cell's line">
+          <span id="mobile-selection">ROW 3 · COLUMN 2</span>
+          <div><button data-mobile-shift="left" aria-label="Shift selected row left">←</button><button data-mobile-shift="up" aria-label="Shift selected column up">↑</button><button data-mobile-shift="down" aria-label="Shift selected column down">↓</button><button data-mobile-shift="right" aria-label="Shift selected row right">→</button></div>
+          <small>Tap a cell to choose its row and column.</small>
+        </div>
+        <div class="board-toolbar">
+          <button id="undo-button" class="tool-button" disabled><span aria-hidden="true">↶</span> Undo <kbd>Z</kbd></button>
+          <button id="reset-button" class="tool-button"><span aria-hidden="true">↺</span> Reset <kbd>R</kbd></button>
+          <button id="hint-button" class="tool-button hint-button"><span aria-hidden="true">◇</span> A small hint</button>
+        </div>
+        <div class="note-box" id="note-box"><span class="note-label" id="note-label">FIELD NOTE</span><p id="level-note">Every signal has a home.</p></div>
+        <div class="completion" id="completion" hidden>
+          <div><span class="eyebrow">CONNECTION ESTABLISHED</span><h3 id="completion-title">All signals home.</h3><p id="completion-copy"></p></div>
+          <button class="primary-button" id="next-button">Next frequency <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="keyboard-tip">KEYBOARD <span>Choose a cell, then <kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> to shift its line.</span></p>
+      </section>
+    </section>
+
+    <footer class="site-footer"><span>AN ORIGINAL GAME FOR THE THEME <b>SHIFT</b></span><button id="credits-open">About &amp; credits</button><span class="footer-coordinate" aria-hidden="true">● ─ ─ ◇ ─ ─ △</span></footer>
+    <div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="announcement"></div>
+  </main>
+
+  <dialog id="help-dialog" aria-labelledby="help-title">
+    <div class="dialog-top"><span class="eyebrow">THE SHORT VERSION</span><button class="close-button" data-close aria-label="Close how to play">×</button></div>
+    <h2 id="help-title">Make a little space.</h2>
+    <p>Each <strong>solid shape</strong> is a signal. Its matching <strong>outline</strong> is home. Move every signal onto its own outline to finish a frequency.</p>
+    <ol class="help-steps"><li>Use the arrows along the edges to shift a whole row or column by one cell. On a small screen, tap a cell, then use the four arrows below the board.</li><li>Signals that leave one edge reappear on the opposite edge. The outline homes stay fixed.</li><li>Several signals can move at once. A signal already at home may need to leave before everything fits.</li></ol>
+    <div class="help-keys"><b>Keyboard</b><p>Tab to a cell, or click one. Arrow keys shift its row or column. Hold <kbd>Shift</kbd> + an arrow to choose a different cell without moving a signal. <kbd>Z</kbd> undoes; <kbd>R</kbd> resets. <kbd>Escape</kbd> closes a dialog.</p></div>
+    <p class="small-note">Ten frequencies. Optional hints. Take all the time you need. Your completed levels and best move counts are saved on this device when browser storage is available.</p>
+    <button class="primary-button dialog-done" data-close>Find my frequency <span aria-hidden="true">→</span></button>
+  </dialog>
+
+  <dialog id="levels-dialog" aria-labelledby="levels-title">
+    <div class="dialog-top"><span class="eyebrow">TEN LITTLE JOURNEYS</span><button class="close-button" data-close aria-label="Close frequency selector">×</button></div>
+    <h2 id="levels-title">Pick a frequency.</h2><p>Start anywhere. Come back whenever.</p>
+    <div id="level-list" class="level-list"></div>
+  </dialog>
+
+  <dialog id="credits-dialog" aria-labelledby="credits-title">
+    <div class="dialog-top"><span class="eyebrow">SHIFT SIGNAL / 2026</span><button class="close-button" data-close aria-label="Close credits">×</button></div>
+    <h2 id="credits-title">Small shifts.<br>Shared possibilities.</h2>
+    <p>An original spatial puzzle prepared under Nicholas Tanner’s authorization for Game Off 2026 and its theme, SHIFT.</p>
+    <p><strong>AI disclosure:</strong> Codex generated the game concept, visual design, code, level-generation tools, documentation and tests under Nicholas’s authorization. This work is not represented as personally coded or hand-illustrated by Nicholas.</p>
+    <p>No external art, fonts, music, libraries or game engines are used. Sound is synthesized in your browser. Code is available under the MIT license.</p>
+    <p class="small-note">Progress stays in this browser. The game makes no network requests of its own and collects no analytics.</p>
+    <button class="primary-button dialog-done" data-close>Back to the board <span aria-hidden="true">→</span></button>
+  </dialog>
+  <script src="engine.js"></script>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+SHIFT SIGNAL
+A little movement. A different way through.
+
+Shift entire rows and columns to guide solid signals onto their matching outline homes. Signals wrap around the board; one small movement can change the route for everyone.
+
+Ten original spatial puzzles, from a first connection to a five-by-five field of crossed frequencies. No timer. Unlimited undo. Optional shortest-route hints. Quiet procedural sound, off until you choose it.
+
+Play with mouse, touch or keyboard. On a small screen, tap a cell and use the four arrows beneath the board. Keyboard arrows shift the selected cell's line; Shift+arrow selects a different cell. Z undoes, R resets.
+
+Made for Game Off 2026 and the theme SHIFT.
+
+AI-use disclosure: Codex generated the original game concept, visual design, code, levels, documentation and tests under Nicholas Tanner's authorization. This work is not represented as personally coded or hand-illustrated by Nicholas. No external artwork, recordings, fonts, templates, libraries or game engines are included. Gameplay marks are original SVG/CSS and sound is synthesized in the browser.
+
+No analytics or account required to play. Progress is stored only in this browser when storage is available. Code: MIT license.
+

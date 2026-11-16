@@ -1,0 +1,21 @@
+SHIFT SIGNAL — OFFLINE VERIFICATION
+2026-11-16T04:27:57.694Z
+
+Level 01 | 3x3 | shortest 1 | independent BFS 11 states | PASS
+Level 02 | 3x3 | shortest 2 | independent BFS 67 states | PASS
+Level 03 | 3x3 | shortest 3 | independent BFS 277 states | PASS
+Level 04 | 4x4 | shortest 3 | independent BFS 782 states | PASS
+Level 05 | 4x4 | shortest 4 | independent BFS 3327 states | PASS
+Level 06 | 4x4 | shortest 5 | independent BFS 13723 states | PASS
+Level 07 | 4x4 | shortest 6 | independent BFS 30518 states | PASS
+Level 08 | 5x5 | shortest 5 | independent BFS 20813 states | PASS
+Level 09 | 5x5 | shortest 6 | independent BFS 66520 states | PASS
+Level 10 | 5x5 | shortest 7 | independent BFS 153060 states | PASS
+
+3289 assertions passed.
+Independent matrix rotation checks cover row/column shifts, wrapping, collision avoidance, inverse moves and full cycles.
+Every advertised par is proven by independent breadth-first search.
+In-game hint paths agree with the independent shortest distances.
+Static DOM targets and local runtime assets verified; no remote runtime URLs.
+
+Scope: executable logic and static checks only. No browser or visual acceptance was performed.
