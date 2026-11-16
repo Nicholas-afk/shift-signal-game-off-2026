@@ -33,12 +33,13 @@ Completed frequencies, best move counts and the last selected frequency are stor
 
 ## Itch.io package
 
-`shift-signal-itch.zip` is ready to inspect and upload as an HTML game. `index.html` is at the ZIP root; there is no enclosing directory. In an authorized itch.io project, select **HTML**, upload the ZIP, and mark it **This file will be played in the browser**. A suggested initial embed size is **1280×900**, with full-screen and mobile-friendly play enabled. Narrow embeds use the compact touch layout.
+`shift-signal-itch.zip` is ready to inspect and upload as an HTML game. `index.html` is at the ZIP root; there is no enclosing directory. In an authorized itch.io project, select **HTML**, upload the ZIP, and mark it **This file will be played in the browser**. A suggested initial embed size is **960×900**, with full-screen and mobile-friendly play enabled. Narrow embeds use the compact touch layout.
 
 Published and submitted on 16 November 2026.
 
 - Play: https://nicholas-afk.itch.io/shift-signal
 - Public source: https://github.com/Nicholas-afk/shift-signal-game-off-2026
+- Entry: https://itch.io/jam/game-off-2026/rate/5379054
 - Event: https://itch.io/jam/game-off-2026
 
 The Game Off site confirmed “Entry submitted to jam.” This records an entry, not an award or selection. The form discloses the AI contribution in all six applicable areas and labels the extent “Almost everything - predominantly AI-generated.”
